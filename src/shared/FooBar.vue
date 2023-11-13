@@ -1,0 +1,15 @@
+<template>
+  <div>it's Vue Component!</div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  setup() {
+    return {};
+  },
+});
+</script>
+
+<style scoped></style>

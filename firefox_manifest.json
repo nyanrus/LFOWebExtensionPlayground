@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "lfoWebExt",
+  "version": "1.0",
+
+  "description": "nyanrus's webExtension Playground",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["injectContentScript.js"]
+    }
+  ],
+  "web_accessible_resources": ["*"]
+}

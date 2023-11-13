@@ -6,8 +6,13 @@
 
 import { Test } from "./class";
 import { waitForElement } from "./library";
+import { injectVue } from "../shared/injectVueComponent";
 
 (async () => {
+  console.log("WAITING");
   waitForElement("react-root");
-  new Test().tion();
+  console.log("WAITED!!!");
+  injectVue();
+  const lfo = document.createElement("lfo-elem");
+  document.body.appendChild(lfo);
 })();

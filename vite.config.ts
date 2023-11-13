@@ -6,9 +6,8 @@
 
 import { UserConfig, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import swc from "unplugin-swc";
 import { resolve } from "path";
-import fs from "fs";
+import * as fs from "fs";
 
 const r = (rpath: string) => {
   return resolve(__dirname, rpath);
@@ -22,7 +21,7 @@ export default defineConfig(() => {
       emptyOutDir: false,
       sourcemap: true,
       reportCompressedSize: false,
-      target: "esnext",
+      target: "es2022",
       minify: false,
       cssMinify: false,
       rollupOptions: {
@@ -41,14 +40,16 @@ export default defineConfig(() => {
         name: "copyFiles",
         enforce: "pre",
         buildStart(options) {
-          this.addWatchFile(r("src/injectContentScript.js"));
+          ["src/injectContentScript.js", "./firefox_manifest.json"].forEach((v) => {
+            this.addWatchFile(r(v));
+          });
+
           if (!fs.existsSync(r("dist"))) fs.mkdirSync(r("dist"));
           fs.copyFileSync(r("./src/injectContentScript.js"), r("dist/injectContentScript.js"));
+          fs.copyFileSync(r("./firefox_manifest.json"), r("dist/manifest.json"));
         },
       },
       vue(),
-      swc.vite(),
-      swc.rollup(),
     ],
   };
   return json;

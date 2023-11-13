@@ -1,19 +1,21 @@
-[Twitter UI Customizer](https://github.com/kaonasi-biwa/Twitter-UI-Customizer)(kaonasi-biwa)の新技術導入のための遊び場 \
-[nyanrus_TUIC](https://github.com/nyanrus/Twitter-UI-Customizer)はこちらへ
+# LFOWebExtensionPlayground
 
-びわさんまじ神
+Playground of Testing New Techs for [Twitter UI Customizer](https://github.com/kaonasi-biwa/Twitter-UI-Customizer)(kaonasi-biwa) \
+[nyanrus_TUIC](https://github.com/nyanrus/Twitter-UI-Customizer) is here.
+
+biwa-san is really god()
 
 HOW TO RUN
 
 ```bash
-# pnpmがインストールされてない場合
-# 注意：必ずnpmでしてください（yarnでしたら実行ファイルのPATHに追加されない）
+# if pnpm is not installed
+# caution：Please install with npm (if with yarn, the execution path do not added to PATH)
 npm i pnpm -g
 
-# npm iと同義です
-# クソ速い
+# same with npm i
+# really fase
 pnpm i
 
-# まだweb-ext入れてないのでdistに吐き出すだけ
+# I don't used web-ext, so just outputting to dist
 pnpm build
 ```

@@ -18,6 +18,7 @@
     "vue-tsc": "^1.8.22"
   },
   "dependencies": {
+    "@webcomponents/custom-elements": "^1.6.0",
     "vue": "^3.3.8",
     "webextension-polyfill": "^0.10.0"
   }

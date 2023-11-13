@@ -7,7 +7,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.twitter.com/*"],
+      "matches": ["*://*.twitter.com/*", "*://*.example.com/*"],
       "js": ["injectContentScript.js"]
     }
   ],

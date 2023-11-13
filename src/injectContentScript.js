@@ -4,6 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+// this is required because content script is not ESM
 (async () => {
   console.log("hallo");
   const content = await import(chrome.runtime.getURL("content.js"));

@@ -4,15 +4,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Test } from "./class";
-import { waitForElement } from "./library";
 import { injectVue } from "../shared/injectVueComponent";
 
 (async () => {
-  console.log("WAITING");
-  waitForElement("react-root");
-  console.log("WAITED!!!");
+  console.log("RUN");
   injectVue();
-  const lfo = document.createElement("lfo-elem");
-  document.body.appendChild(lfo);
+  const elem = document.createElement("lfo-elem");
+  document.body.appendChild(elem);
 })();

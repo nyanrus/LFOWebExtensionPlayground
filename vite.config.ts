@@ -32,7 +32,6 @@ export default defineConfig(() => {
           format: "es",
           entryFileNames: "[name].js",
         },
-        plugins: [],
       },
     },
     plugins: [
@@ -40,13 +39,13 @@ export default defineConfig(() => {
         name: "copyFiles",
         enforce: "pre",
         buildStart(options) {
-          ["src/injectContentScript.js", "./firefox_manifest.json"].forEach((v) => {
+          ["src/injectContentScript.js", "./manifest.json"].forEach((v) => {
             this.addWatchFile(r(v));
           });
 
           if (!fs.existsSync(r("dist"))) fs.mkdirSync(r("dist"));
           fs.copyFileSync(r("./src/injectContentScript.js"), r("dist/injectContentScript.js"));
-          fs.copyFileSync(r("./firefox_manifest.json"), r("dist/manifest.json"));
+          fs.copyFileSync(r("./manifest.json"), r("dist/manifest.json"));
         },
       },
       vue(),

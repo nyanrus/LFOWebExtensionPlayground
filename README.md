@@ -3,8 +3,6 @@
 Playground of Testing New Techs for [Twitter UI Customizer](https://github.com/kaonasi-biwa/Twitter-UI-Customizer)(kaonasi-biwa) \
 [nyanrus_TUIC](https://github.com/nyanrus/Twitter-UI-Customizer) is here.
 
-biwa-san is really god()
-
 HOW TO RUN
 
 ```bash
